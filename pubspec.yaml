@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   hidden_drawer_menu: ^1.0.1
   dots_indicator: ^0.0.5+1
+  flutter_slidable: "^0.5.3"
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +48,7 @@ flutter:
     - assets/icons/facebook.png
     - assets/icons/google.png
     - assets/icons/twitter.png
+    - assets/success_img.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

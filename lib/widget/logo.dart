@@ -12,10 +12,10 @@ class Logo extends StatelessWidget {
             Icons.card_travel,
             color: Colors.green,
           ),
-          height: 40,
-          width: 40,
+          height: 35,
+          width: 35,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(20),
               border: Border.all(
                 color: Colors.blue,
               )),

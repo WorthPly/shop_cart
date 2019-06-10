@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/screens/cart_list_tab_page.dart';
 import 'package:flutter_ecommerce_app/widget/logo.dart';
 
 import '../animUtil.dart';
 import 'bottom_tabs/home_tab_page.dart';
+import 'my_profile_tab_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -46,9 +48,9 @@ class _HomePageState extends State<HomePage>
   _createPage(){
     pages.add(HomeTabPage());
     pages.add(HomeTabPage());
+    pages.add(CartListTabPage());
     pages.add(HomeTabPage());
-    pages.add(HomeTabPage());
-    pages.add(HomeTabPage());
+    pages.add(MyProfileTabPage());
   }
 
   void onPageChanged(int index) {
@@ -209,7 +211,7 @@ class _HomePageState extends State<HomePage>
                     ? bottomItemActiveColor
                     : bottomItemInActiveColor,
                 Icons.local_offer,
-                "Home"),
+                "Hot offer"),
           )),
           Expanded(
               child: InkWell(
@@ -219,7 +221,7 @@ class _HomePageState extends State<HomePage>
                     ? bottomItemActiveColor
                     : bottomItemInActiveColor,
                 Icons.shopping_cart,
-                "Home"),
+                "My Cart"),
           )),
           Expanded(
               child: InkWell(
@@ -229,7 +231,7 @@ class _HomePageState extends State<HomePage>
                           ? bottomItemActiveColor
                           : bottomItemInActiveColor,
                       Icons.search,
-                      "Home"))),
+                      "Search"))),
           Expanded(
               child: InkWell(
             onTap: ()  => onTabTapped(4),
@@ -238,7 +240,7 @@ class _HomePageState extends State<HomePage>
                     ? bottomItemActiveColor
                     : bottomItemInActiveColor,
                 Icons.person_outline,
-                "Home"),
+                "Profile"),
           )),
         ],
       ),

@@ -3,6 +3,8 @@ import 'package:flutter_ecommerce_app/widget/TriangleClipper.dart';
 import 'package:flutter_ecommerce_app/widget/TriangleClipper2.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 
+import '../item_list_tab_page.dart';
+
 class HomeTabPage extends StatefulWidget {
   @override
   _HomeTabPageState createState() => _HomeTabPageState();
@@ -94,21 +96,27 @@ class _HomeTabPageState extends State<HomeTabPage> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
                         Expanded(
-                            child: Stack(
-                          fit: StackFit.expand,
-                          children: <Widget>[
-                            Image.network(
-                              "https://images.unsplash.com/photo-1557409710-aaabc9ed973f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-                              fit: BoxFit.cover,
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10),
-                                child: tagContainer("Women's wear"),
+                            child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => ItemListTabPage()));
+                          },
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: <Widget>[
+                              Image.network(
+                                "https://images.unsplash.com/photo-1557409710-aaabc9ed973f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+                                fit: BoxFit.cover,
                               ),
-                            )
-                          ],
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(bottom: 10),
+                                  child: tagContainer("Women's wear"),
+                                ),
+                              )
+                            ],
+                          ),
                         )),
                         const SizedBox(
                           height: 5,

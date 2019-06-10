@@ -77,7 +77,7 @@ class IntroPageItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var image = Image.asset(
+    var image = Image.network(
       item.imageUrl,
       fit: BoxFit.cover,
       alignment: FractionalOffset(
